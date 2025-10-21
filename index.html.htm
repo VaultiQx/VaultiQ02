@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kite AI Wind Runner SBT for Kite Creator Collective</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide icons for high-quality SVG icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Styles for Elegance and Motion */
+        :root {
+            --cream-bg: #FAF8F1;
+            --deep-brown: #432323;
+        }
+
+        body {
+            background-color: var(--cream-bg);
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle wind lines for Hero visual */
+        .wind-motif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 0.1;
+        }
+
+        .wind-line {
+            position: absolute;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--deep-brown) 50%, transparent 100%);
+            animation: wind-flow linear infinite;
+        }
+
+        .wind-line:nth-child(1) { top: 10%; left: -100%; animation-duration: 12s; transform: rotate(2deg); }
+        .wind-line:nth-child(2) { top: 35%; left: -100%; animation-duration: 15s; transform: rotate(-1deg); }
+        .wind-line:nth-child(3) { top: 60%; left: -100%; animation-duration: 10s; transform: rotate(3deg); }
+        .wind-line:nth-child(4) { top: 85%; left: -100%; animation-duration: 18s; transform: rotate(-2deg); }
+
+        @keyframes wind-flow {
+            0% { transform: translateX(0) rotate(var(--rotation, 0deg)); }
+            100% { transform: translateX(50%) rotate(var(--rotation, 0deg)); }
+        }
+
+        /* Custom glow effect for premium card */
+        .premium-glow {
+            box-shadow: 0 0 30px rgba(67, 35, 35, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+        .premium-glow:hover {
+             box-shadow: 0 0 50px rgba(67, 35, 35, 0.7), inset 0 0 15px rgba(255, 255, 255, 1);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream-bg': '#FAF8F1',
+                        'deep-brown': '#432323',
+                        'accent-dark': '#432323',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream-bg text-black min-h-screen">
+
+    <!-- Header for smooth scrolling -->
+    <header class="sticky top-0 z-50 bg-cream-bg/95 backdrop-blur-sm p-4 border-b border-deep-brown/10 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-extrabold text-deep-brown">Kite AI</h1>
+            <a href="#join" class="px-4 py-2 bg-deep-brown text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300">
+                Join the Initiative
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8 space-y-24">
+
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-16 pb-24 text-center rounded-3xl bg-white shadow-2xl shadow-deep-brown/10 fade-in-section">
+            <div class="wind-motif">
+                <div class="wind-line" style="--rotation: 2deg;"></div>
+                <div class="wind-line" style="--rotation: -1deg;"></div>
+                <div class="wind-line" style="--rotation: 3deg;"></div>
+                <div class="wind-line" style="--rotation: -2deg;"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <h2 class="text-xs tracking-widest uppercase font-semibold text-deep-brown/70 mb-2">Kite Creator Collective</h2>
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-deep-brown leading-tight mb-6">
+                    Kite AI Wind Runner
+                    <span class="block text-3xl sm:text-5xl mt-2"> SBT Initiative</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto mb-10">
+                    Honoring creators who shape the wind of innovation.
+                </p>
+                <a href="#join" class="cta-button inline-block px-12 py-4 bg-deep-brown text-white font-bold text-lg rounded-full shadow-lg shadow-deep-brown/40 hover:scale-105 transition-all duration-500 transform hover:bg-opacity-95">
+                    Join the Initiative
+                </a>
+            </div>
+
+            <!-- Abstract Kite Icon -->
+            <div class="absolute bottom-[-50px] right-[-50px] opacity-20 transform rotate-12 z-0 hidden lg:block">
+                <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="#432323" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="w-48 h-48">
+                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                    <path d="M12 2L2 12 12 22 22 12 12 2Z"></path>
+                    <path d="M12 12L22 2"></path>
+                    <path d="M12 12L2 2"></path>
+                </svg>
+            </div>
+        </section>
+        
+        <!-- 2. About Section (Space adjusted for the new card) -->
+        <section id="about" class="fade-in-section pt-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-12">
+                What is the Wind Runner Initiative?
+            </h2>
+
+            <div class="bg-white p-6 md:p-12 rounded-2xl shadow-xl shadow-deep-brown/5 grid md:grid-cols-3 gap-8 items-start">
+
+                <div class="md:col-span-2 text-gray-700 text-lg leading-relaxed">
+                    <p>
+                        We are proud to announce the official launch of the ‘Kite AI: Wind Runner’ Initiative, a pivotal step in fostering a true meritocracy within our community. This program is dedicated to the creation and distribution of the <span class="text-deep-brown font-semibold italic">Wind Runner Soul-Bound Token (SBT)</span>, an immutable, non-transferable digital honor. The Wind Runner SBT serves as a testament to the <span class="text-deep-brown font-bold">authenticity</span> and <span class="text-deep-brown font-bold">creativity</span> of our most dedicated contributors. It symbolizes a commitment to <span class="text-deep-brown font-bold">sustainability</span>, long-term vision, and the shared responsibility of building the future of Kite AI.
+                    </p>
+                </div>
+
+                <div class="space-y-4 md:col-span-1 border-l-4 border-deep-brown/30 pl-4 md:pl-6 pt-2 md:pt-0">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-deep-brown"></i>
+                        <span class="font-bold text-deep-brown">Authenticity</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-deep-brown"></i>
+                        <span class="font-bold text-deep-brown">Creativity</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="leaf" class="w-6 h-6 text-deep-brown"></i>
+                        <span class="font-bold text-deep-brown">Sustainability</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="award" class="w-6 h-6 text-deep-brown"></i>
+                        <span class="font-bold text-deep-brown">Immutable Honor</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. What is a Wind Runner? -->
+        <section id="roles" class="fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-12">
+                The Wind Runner Identity
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1: Visionary -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 border-t-4 border-deep-brown/50 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold text-deep-brown mb-2">The Visionary</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        A Wind Runner is an Ideation Catalyst, consistently pushing the boundaries of what is possible. They challenge convention, offering fresh perspectives and unique content.
+                    </p>
+                    <p class="text-xs font-semibold text-deep-brown/70">What is a Wind Runner?</p>
+                </div>
+
+                <!-- Card 2: Creator -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 border-t-4 border-deep-brown/50 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🪁</div>
+                    <h3 class="text-xl font-bold text-deep-brown mb-2">The Authentic Creator</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        They are Community Architects, actively building and nurturing positive engagement. They are verifiable, transparent, and focused on quality over quantity.
+                    </p>
+                    <p class="text-xs font-semibold text-deep-brown/70">How to Obtain the SBT?</p>
+                </div>
+
+                <!-- Card 3: Innovator -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 border-t-4 border-deep-brown/50 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-bold text-deep-brown mb-2">The Persistent Force</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Possessing Unwavering Dedication, a Wind Runner demonstrates long-term commitment. They are the consistent energy driving growth and stability within the collective.
+                    </p>
+                    <p class="text-xs font-semibold text-deep-brown/70">What is a Wind Runner?</p>
+                </div>
+
+                <!-- Card 4: Leader -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 border-t-4 border-deep-brown/50 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="text-4xl mb-4">🌊</div>
+                    <h3 class="text-xl font-bold text-deep-brown mb-2">The Guiding Spirit</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        A Thought Leader, sharing knowledge, mentoring others, and setting a high standard for intellectual honesty and respectful community discourse.
+                    </p>
+                    <p class="text-xs font-semibold text-deep-brown/70">How to Obtain the SBT?</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. Benefits Section (SBT Tiers) -->
+        <section id="benefits" class="fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-12">
+                SBT Distribution: Our Guiding Principles
+            </h2>
+
+            <!-- Guiding Principles Text -->
+            <div class="text-center text-gray-700 max-w-3xl mx-auto mb-10">
+                <p class="text-lg italic mb-6">
+                    "We prioritize meritocracy, quality, and commitment. The distribution model ensures the most impactful and dedicated community members receive the highest honors."
+                </p>
+                <p class="text-sm font-semibold uppercase tracking-wider text-deep-brown/70">
+                    SBT DISTRIBUTION ARRANGEMENT
+                </p>
+            </div>
+
+
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Tier 1: Gold -->
+                <div class="bg-white p-8 rounded-2xl shadow-2xl premium-glow text-center border border-deep-brown/50 transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-3">🥇</div>
+                    <h3 class="text-2xl font-extrabold text-deep-brown mb-1">Wind Runner Gold</h3>
+                    <p class="text-xs uppercase font-bold text-deep-brown/70 mb-6">Legendary Status (Top 1%)</p>
+                    <ul class="text-left space-y-3 text-gray-700 text-sm">
+                        <li class="flex items-center">
+                            <i data-lucide="crown" class="w-4 h-4 mr-2 text-deep-brown flex-shrink-0"></i>
+                            Direct access to core team and exclusive alpha channels.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="trending-up" class="w-4 h-4 mr-2 text-deep-brown flex-shrink-0"></i>
+                            Priority eligibility for future grants and rewards.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="settings" class="w-4 h-4 mr-2 text-deep-brown flex-shrink-0"></i>
+                            Governance weighting/input on future product features.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 2: Silver -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center border border-gray-300 transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-3">🥈</div>
+                    <h3 class="text-2xl font-extrabold text-deep-brown mb-1">Wind Runner Silver</h3>
+                    <p class="text-xs uppercase font-bold text-gray-700/70 mb-6">High Impact (Top 5%)</p>
+                    <ul class="text-left space-y-3 text-gray-700 text-sm">
+                        <li class="flex items-center">
+                            <i data-lucide="zap" class="w-4 h-4 mr-2 text-deep-brown/80 flex-shrink-0"></i>
+                            Access to private, high-engagement community groups.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="message-circle" class="w-4 h-4 mr-2 text-deep-brown/80 flex-shrink-0"></i>
+                            Priority support and official recognition channels.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="briefcase" class="w-4 h-4 mr-2 text-deep-brown/80 flex-shrink-0"></i>
+                            Early testing privileges for new Kite AI features.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 3: Bronze -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center border border-gray-200 transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="text-4xl mb-3">🥉</div>
+                    <h3 class="text-2xl font-extrabold text-deep-brown mb-1">Wind Runner Bronze</h3>
+                    <p class="text-xs uppercase font-bold text-gray-500 mb-6">Dedicated Contributor (Top 20%)</p>
+                    <ul class="text-left space-y-3 text-gray-700 text-sm">
+                        <li class="flex items-center">
+                            <i data-lucide="user" class="w-4 h-4 mr-2 text-deep-brown/60 flex-shrink-0"></i>
+                            Public SBT recognition badge on community platforms.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="heart" class="w-4 h-4 mr-2 text-deep-brown/60 flex-shrink-0"></i>
+                            Guaranteed inclusion in official Kite AI content spotlights.
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="share-2" class="w-4 h-4 mr-2 text-deep-brown/60 flex-shrink-0"></i>
+                            Increased visibility and signal boosting from official channels.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. How to Join (Modified for Symmetrical Layout) -->
+        <section id="join" class="fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-12">
+                How to Become a Wind Runner
+            </h2>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Each step uses the same card structure, ensuring uniformity -->
+
+                <!-- Step 1 (Action link moved to the corner) -->
+                <div class="flex items-center space-x-6 bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 hover:border-deep-brown/30 border border-transparent transition-all duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold text-deep-brown/70">1️⃣</div>
+                    <!-- Combined Icon and Text block -->
+                    <div class="flex items-center flex-grow space-x-4">
+                        <i data-lucide="x" class="w-8 h-8 text-deep-brown flex-shrink-0"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-brown">Publish Content on X (Twitter)</h3>
+                            <p class="text-gray-600 text-sm">Create high-quality, authentic, and thoughtful content related to Kite AI and innovation.</p>
+                        </div>
+                    </div>
+                    <!-- Action Link in the corner -->
+                    <a href="https://x.com" target="_blank" class="text-deep-brown hover:underline text-sm font-semibold ml-auto flex-shrink-0 hidden sm:block">Post Now &rarr;</a>
+                </div>
+
+                <!-- Step 2 (Action link moved to the corner) -->
+                <div class="flex items-center space-x-6 bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 hover:border-deep-brown/30 border border-transparent transition-all duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold text-deep-brown/70">2️⃣</div>
+                    <!-- Combined Icon and Text block -->
+                    <div class="flex items-center flex-grow space-x-4">
+                        <i data-lucide="messages-square" class="w-8 h-8 text-deep-brown flex-shrink-0"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-brown">Share & Engage on Discord</h3>
+                            <p class="text-gray-600 text-sm">Bring your best posts and insights to the official community channels for discussion and feedback.</p>
+                        </div>
+                    </div>
+                    <!-- Action Link in the corner -->
+                    <a href="#" target="_blank" class="text-deep-brown hover:underline text-sm font-semibold ml-auto flex-shrink-0 hidden sm:block">Discord Link &rarr;</a>
+                </div>
+
+                <!-- Step 3 (Button link moved to the corner) -->
+                <div class="flex items-center space-x-6 bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 hover:border-deep-brown/30 border border-transparent transition-all duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold text-deep-brown/70">3️⃣</div>
+                    <!-- Combined Icon and Text block -->
+                    <div class="flex items-center flex-grow space-x-4">
+                        <i data-lucide="form-input" class="w-8 h-8 text-deep-brown flex-shrink-0"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-brown">Submit via Form Link</h3>
+                            <p class="text-gray-600 text-sm">Officially submit your best content, profile links, and commitment statement via the application form.</p>
+                        </div>
+                    </div>
+                    <!-- Action Link/Button in the corner -->
+                    <a href="https://kiteai.typeform.com/WindRunner" target="_blank" class="px-4 py-2 bg-deep-brown text-white rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300 flex-shrink-0 ml-auto hidden sm:block">
+                        Apply Now &rarr;
+                    </a>
+                </div>
+
+                <!-- Step 4 (No action link, remains unchanged) -->
+                <div class="flex items-center space-x-6 bg-white p-6 rounded-2xl shadow-xl shadow-deep-brown/5 hover:border-deep-brown/30 border border-transparent transition-all duration-300">
+                    <div class="flex-shrink-0 text-3xl font-extrabold text-deep-brown/70">4️⃣</div>
+                    <div class="flex items-center flex-grow space-x-4">
+                        <i data-lucide="check-square" class="w-8 h-8 text-deep-brown flex-shrink-0"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-deep-brown">Maintain Quality & Consistency</h3>
+                            <p class="text-gray-600 text-sm">The SBT is earned through sustained, high-quality contribution and ethical conduct within the community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Security Notice -->
+        <section class="fade-in-section">
+            <div class="max-w-3xl mx-auto p-6 md:p-8 bg-white border-2 border-red-500 rounded-xl shadow-2xl">
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 text-3xl">⚠️</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-red-700 mb-2">SECURITY AND FRAUD NOTICE</h3>
+                        <p class="text-gray-700 font-medium">
+                            <span class="text-red-700 font-extrabold">Kite AI is NOT conducting any public token sales or ICOs.</span> The Wind Runner SBT is a non-transferable *honor* and badge of contribution.
+                            <br class="hidden sm:inline">
+                            Do not trust any external sources claiming to sell or offer a tradable 'Wind Runner Token.' Report all suspected scams immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. Creator Profile Card (Moved to the bottom and translated) -->
+        <section id="creator-profile" class="fade-in-section max-w-3xl mx-auto pt-16 relative">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center text-deep-brown mb-12">
+               
+            </h2>
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-2xl shadow-deep-brown/10 border-t-8 border-deep-brown/80 text-center">
+                
+                <!-- Header and Status -->
+                <div class="flex flex-col items-center justify-center mb-5">
+                    <div class="text-deep-brown border-2 border-deep-brown p-3 rounded-full mb-3 inline-block">
+                        <i data-lucide="user" class="w-8 h-8"></i>
+                    </div>
+                    <!-- Translated text below -->
+                    <h3 class="text-2xl font-extrabold text-deep-brown mb-1">VaultiQx: Contributor Profile</h3>
+                    <p class="text-xs uppercase font-semibold text-deep-brown/70 tracking-widest">Kite Creator Collective Member</p>
+                </div>
+                
+                <!-- Bio (Translated) -->
+                <p class="text-gray-700 text-base italic mb-6 border-y border-deep-brown/20 py-4 max-w-2xl mx-auto">
+                    Web3 enthusiast, crypto explorer. Believer in decentralization and community power.
+                    Working on building the future with: <span class="font-semibold text-deep-brown">@Tabichain, @GoKiteAI, @StoryProtocol</span>
+                </p>
+                
+                <!-- Contact Links (Uniform Button/Badge Style) -->
+                <div class="flex flex-wrap justify-center items-center gap-3">
+                    <!-- Twitter -->
+                    <a href="https://x.com/VaultiQx" target="_blank" class="flex items-center space-x-2 text-sm font-medium bg-deep-brown text-white px-4 py-2 rounded-full hover:bg-deep-brown/90 transition-all duration-300 shadow-md">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                        <span>Twitter: @VaultiQx</span>
+                    </a>
+                    <!-- Telegram -->
+                    <a href="https://t.me/VaultiQxx" target="_blank" class="flex items-center space-x-2 text-sm font-medium bg-gray-200 text-deep-brown px-4 py-2 rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Telegram: @VaultiQxx</span>
+                    </a>
+                    <!-- Discord -->
+                    <a href="https://discord.com/users/vaultiqx" target="_blank" class="flex items-center space-x-2 text-sm font-medium bg-gray-200 text-deep-brown px-4 py-2 rounded-full hover:bg-gray-300 transition-all duration-300 shadow-md">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Discord: vaultiqx</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-8 text-xs text-gray-500 border-t border-deep-brown/10">
+        &copy; 2025 Kite AI. All rights reserved. Wind Runner SBT is a non-transferable recognition of contribution.
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Intersection Observer for Fade-In Scroll Animation
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
