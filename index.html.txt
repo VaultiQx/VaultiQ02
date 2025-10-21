@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kite AI Agent Infographic - Branded Theme (English)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Kite Branded Colors (Adapted for White Background) */
+        :root {
+            --color-light-bg: #FAF8F1; /* RESTORED: Custom Off-White Background */
+            --color-card-bg: #FFFFFF; /* Pure White Card Background for content blocks */
+            --color-brand-blue: #0A0A4A; /* Deep Navy Blue (Kite Primary) */
+            --color-electric-blue: #0077FF; /* Electric Blue (Primary Accent) */
+            --color-secondary-accent: #38A3A5; /* Teal/Cyan-like secondary accent */
+            --color-text-dark: #1F2937; /* Dark text */
+            --color-text-muted: #6B7280; /* Muted text */
+            --color-heavy-dark: #432323; /* Custom dark color for emphasis (#432323) */
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-light-bg); /* Now uses Off-White */
+            color: var(--color-text-dark);
+            min-height: 100vh;
+        }
+
+        /* Professional Card Styling */
+        .card {
+            background-color: var(--color-card-bg); /* Setting card background to pure white */
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid #E5E7EB;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Hover Effect for Primary Blue */
+        .hover-primary:hover {
+            background-color: var(--color-electric-blue);
+            color: white;
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0, 119, 255, 0.4);
+        }
+
+        /* List Item Style */
+        .list-item-clean {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #F3F4F6;
+        }
+        .list-item-clean:last-child {
+            border-bottom: none;
+        }
+
+        .text-brand-blue { color: var(--color-brand-blue); }
+        .bg-brand-blue { background-color: var(--color-brand-blue); }
+        .text-electric-blue { color: var(--color-electric-blue); }
+        .bg-electric-blue { background-color: var(--color-electric-blue); }
+        .text-secondary-accent { color: var(--color-secondary-accent); }
+        .text-heavy-dark { color: var(--color-heavy-dark); } /* Custom dark color #432323 for general emphasis */
+        .text-heavy-dark-custom { color: #432323; } /* Specific class for the dark brown color */
+
+        /* New Link Button Style */
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Official Website Buttons - Background color changed to #432323 */
+        .link-btn-brand {
+            background-color: var(--color-heavy-dark); 
+            color: white; 
+        }
+        .link-btn-brand:hover {
+            background-color: #2F1919; /* Slightly darker hover color */
+            transform: translateY(-1px);
+        }
+
+        .link-btn-accent {
+            background-color: var(--color-heavy-dark); /* Background color changed to #432323 */
+            color: white;
+        }
+        .link-btn-accent:hover {
+            background-color: #2F1919; /* Slightly darker hover color */
+            transform: translateY(-1px);
+        }
+
+        /* Social Links - Background remains light grey, text color is forced to custom dark */
+        .link-btn-social {
+            background-color: #F3F4F6;
+            color: #432323; /* Forced to custom dark color */
+            border: 1px solid #D1D5DB;
+        }
+        .link-btn-social:hover {
+            background-color: #E5E7EB;
+            color: var(--color-electric-blue); /* Hover color remains electric blue for better contrast */
+        }
+
+        /* Custom Social Icon Button Style */
+        .social-icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem; /* Large padding for touch target */
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+    <header class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100">
+        
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <h1 class="text-3xl md:text-4xl font-black tracking-widest leading-none text-heavy-dark-custom">KITE AI</h1>
+
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+
+        
+        <!-- MAIN TITLE SECTION -->
+        <section class="text-center mb-20">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                <span class="text-heavy-dark">The Programmable Trust Layer for the Agentic Internet</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mt-6">
+                Kite is an EVM-compatible Layer-1 blockchain designed exclusively for AI and the agentic internet, focusing on solving the core challenges of Identity, Governance, and Payments.
+            </p>
+        </section>
+
+        
+        <div class="h-px bg-gray-300 mb-20 max-w-4xl mx-auto"></div>
+
+        
+        <!-- CORE INFRASTRUCTURE SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">CORE INFRASTRUCTURE & MECHANISM</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                
+                <div class="card border-t-4 border-color-electric-blue hover:shadow-lg">
+                    <div class="text-5xl text-color-electric-blue mb-4">🔗</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">Purpose-Built L1 Blockchain</h4>
+                    <p class="text-gray-600">Designed to handle complex AI workloads, ensuring high throughput and low latency for decentralized AI applications.</p>
+                </div>
+                
+                
+                <div class="card border-t-4 border-color-brand-blue hover:shadow-lg">
+                    <div class="text-5xl text-brand-blue mb-4">🧠</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">PoAI Consensus</h4>
+                    <p class="text-gray-600">Proof of Attributed Intelligence (PoAI) is the core mechanism ensuring transparent attribution and fair rewards for all contributors in the ecosystem.</p>
+                </div>
+
+                
+                <div class="card border-t-4 border-color-secondary-accent hover:shadow-lg">
+                    <div class="text-5xl text-color-secondary-accent mb-4" style="color:var(--color-secondary-accent)">🛠️</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">EVM-Compatible</h4>
+                    <p class="text-gray-600">Compatibility with the Ethereum Virtual Machine (EVM) allows developers to use familiar tools and contracts.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- CORE PERFORMANCE METRICS SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">CORE PERFORMANCE METRICS</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="card border-b-4 border-color-brand-blue text-center hover:shadow-lg">
+                    <p class="text-sm font-semibold text-gray-500 mb-2">Avg Block Time</p>
+                    <div class="text-7xl font-extrabold text-heavy-dark mb-1">1s</div> 
+
+</div>
+                <div class="card border-b-4 border-color-electric-blue text-center hover:shadow-lg">
+                    <p class="text-sm font-semibold text-gray-500 mb-2">Gas Fees</p>
+                    <div class="text-6xl font-extrabold text-heavy-dark mb-1">< $0.000001</div> 
+
+<p class="text-sm font-semibold text-gray-500 mt-2">(For Machine-to-Machine Micropayments)</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="h-px bg-gray-300 mb-20 max-w-4xl mx-auto"></div>
+        
+        
+        <!-- 3 CORE SUPERPOWERS SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">3 CORE SUPERPOWERS FOR AI AGENTS</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                
+                <div class="card border-t-4 border-color-brand-blue hover:shadow-lg">
+                    <div class="text-5xl text-brand-blue mb-4">🔐</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">Agent Native Identity & Auth</h4>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Portable:</strong> Login to any app with your agent identity, just like using Gmail everywhere.</p>
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Interoperable:</strong> Agents interact with any service without repeated sign-ups.</p>
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Reputation-based:</strong> Agents have their own ID and reputation, but can share their owner's reputation with provable lineage.</p>
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Simplified:</strong> Replaces the M×N auth maze with cryptographic solutions.</p>
+                    </div>
+                </div>
+
+                
+                <div class="card border-t-4 border-color-electric-blue hover:shadow-lg">
+                    <div class="text-5xl text-electric-blue mb-4">⚖️</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">Agent Native Governance</h4>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Programmable:</strong> permissions for autonomous agent execution.</p>
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Context-aware:</strong> fine-grained authorization controls.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="card border-t-4 border-color-secondary-accent hover:shadow-lg">
+                    <div class="text-5xl text-color-secondary-accent mb-4" style="color:var(--color-secondary-accent)">💳</div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-900">Agent Native Payments</h4>
+                    <div class="space-y-2 text-sm text-gray-600">
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Instant:</strong> stablecoin-native settlements for machine-to-machine micropayments.</p>
+                        <p class="list-item-clean"><strong class="font-semibold text-gray-800">Near-zero fees:</strong> eliminating overcomplicated payment infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="h-px bg-gray-300 mb-20 max-w-4xl mx-auto"></div>
+
+        
+        <!-- WHY BUILD ON KITE? SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">WHY BUILD ON KITE?</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                
+                <div class="card border-l-4 border-color-secondary-accent p-6 hover:shadow-lg">
+                    <h4 class="text-2xl font-bold text-color-secondary-accent mb-3">🤖 AI-First Platform</h4>
+                    <div class="space-y-1 text-gray-600 text-base">
+                        <div class="list-item-clean">Kite AIR Platform users and developers.</div>
+                        <div class="list-item-clean">MCP (Model Context Protocol) integration</div>
+                        <div class="list-item-clean">AI-optimized infrastructure and tooling</div>
+                        <div class="list-item-clean">Purpose-built for AI computational needs</div>
+                    </div>
+                </div>
+                
+                
+                <div class="card border-l-4 border-color-brand-blue p-6 hover:shadow-lg">
+                    <h4 class="text-2xl font-bold text-brand-blue mb-3">⚡ Sovereign L1 Blockchain</h4>
+                    <div class="space-y-1 text-gray-600 text-base">
+                        <div class="list-item-clean">High throughput, scalability, and reduced latency</div>
+                        <div class="list-item-clean">Optimized for complex AI models and decentralized systems</div>
+                        <div class="list-item-clean">Customized blockchains for specific use cases</div>
+                        <div class="list-item-clean">Integrated compute resources and data pipelines</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- KITE ARCHITECTURE SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">🛠️ KITE ARCHITECTURE - PROGRAMMABLE TRUST LAYER</h3>
+            <div class="max-w-6xl mx-auto">
+                <div class="card border-l-4 border-color-electric-blue p-8">
+                    <p class="text-gray-600 mb-6 text-lg font-medium">
+                        Kite's architecture is designed with modularity at its core, giving developers the flexibility to pick and use different components based on their needs.
+                    </p>
+                    
+                    <div class="space-y-5 text-gray-600 text-base border p-4 rounded-lg border-dashed border-gray-400">
+                        <p>
+                            <strong class="text-gray-900 text-lg">Modular Components:</strong> The stack extends from the Base Layer (EVM-compatible infra, KiteVM extensions, Proof of AI consensus) up to the Platform (SDKs, APIs, scalability). Each piece can be adopted independently or combined for end-to-end workflows.
+                        </p>
+                        <p>
+                            <strong class="text-gray-900 text-lg">Value Chain Integration:</strong> Developers can integrate Proof of AI for attribution and rewards, and plug into the Programmable AI Value Chain for composable multi-agent workflows.
+                        </p>
+                        <p>
+                            <strong class="text-gray-900 text-lg">Agent Ecosystem:</strong> Developers leverage Tools to build and launch agents quickly, and connect with the Agent Ecosystem through MCP, passports, SLAs, and modules.
+                        </p>
+                        <p>
+                            <strong class="text-gray-900 text-lg">Application Ecosystem: Finally, the Application Ecosystem provides a marketplace to scale and monetize these agents.
+                        </p>
+                    </div>
+
+                    <p class="mt-6 italic text-sm text-gray-500">
+                        This modular stack ensures flexibility, scalability, and interoperability for building AI-native applications.
+                        <br>
+                        (The architecture closely follows the provided "Architecture Stack" image.)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- TARGET AUDIENCE SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">👥 TARGET AUDIENCE</h3>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                
+                <div class="card border-l-4 border-color-secondary-accent p-6 hover:shadow-lg">
+                    <h4 class="text-2xl font-bold text-color-secondary-accent mb-3">🤖 AI Users & Researchers</h4>
+                    <div class="space-y-1 text-gray-600 text-base">
+                        <div class="list-item-clean">Kite AIR Platform users and developers.</div>
+                        <div class="list-item-clean">AI agent creators and integrators.</div>
+                        <div class="list-item-clean">Researchers working with AI models.</div>
+                        <div class="list-item-clean">MCP (Model Context Protocol) developers.</div>
+                    </div>
+                </div>
+                
+                
+                <div class="card border-l-4 border-color-brand-blue p-6 hover:shadow-lg">
+                    <h4 class="text-2xl font-bold text-brand-blue mb-3">⚡ Sovereign L1 Blockchain</h4>
+                    <div class="space-y-1 text-gray-600 text-base">
+                        <div class="list-item-clean">Building smart contracts on Kite.</div>
+                        <div class="list-item-clean">Creating dApps and DeFi applications.</div>
+                        <div class="list-item-clean">Web3 developers and innovators.</div>
+                        <div class="list-item-clean">Blockchain infrastructure developers.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- STAKEHOLDERS SECTION -->
+        <section class="mb-20 max-w-3xl mx-auto">
+            <div class="card border-t-8 border-color-electric-blue hover:shadow-lg">
+                <h4 class="text-3xl font-bold text-heavy-dark mb-8 text-center">Key Stakeholders in the PoAI Ecosystem</h4> 
+
+<div class="space-y-4">
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl border-l-4 border-color-secondary-accent">
+                        <span class="mr-4 text-3xl text-color-secondary-accent">👤</span>
+                        <div>
+                            <strong class="text-gray-900 text-lg">Users:</strong> Interact with agents and pay GoKite tokens for gas fees and transaction costs.
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl border-l-4 border-brand-blue">
+                        <span class="mr-4 text-3xl text-brand-blue">🏗️</span>
+                        <div>
+                            <strong class="text-gray-900 text-lg">Builders:</strong> Create agents using the KiteSDK and list them on the marketplace.
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl border-l-4 border-color-secondary-accent">
+                        <span class="mr-4 text-3xl text-color-secondary-accent">💾</span>
+                        <div>
+                            <strong class="text-gray-900 text-lg">Data Providers:</strong> Supply data to AI agents via the Data Access Engine and are rewarded for their contributions.
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-xl border-l-4 border-brand-blue">
+                        <span class="mr-4 text-3xl text-brand-blue">🛡️</span>
+                        <div>
+                            <strong class="text-gray-900 text-lg">Validators:</strong> Maintain network security by validating transactions and AI workloads.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- QUICK LINKS SECTION -->
+        <section class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-gray-900">Quick Links</h3>
+            
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Group 1: Official Websites -->
+                <div class="card p-6 border-l-8 border-brand-blue">
+                    <h4 class="text-2xl font-bold text-heavy-dark-custom mb-6 border-b pb-3 border-gray-200">Official Website</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="https://gokite.ai/" target="_blank" class="link-btn link-btn-brand">
+                            <i class="fas fa-home mr-3"></i>
+                            <span class="text-white">Main Site</span> 
+                        </a>
+                        <a href="https://docs.gokite.ai/" target="_blank" class="link-btn link-btn-accent">
+                            <i class="fas fa-code mr-3"></i>
+                            <span class="text-white">Build Site (Docs)</span> 
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Group 2: Community & Developer Resources -->
+                <div class="card p-6 border-l-8 border-electric-blue">
+                    <h4 class="text-2xl font-bold text-heavy-dark-custom mb-6 border-b pb-3 border-gray-200">Community & Developer Resources</h4>
+                    <div class="grid grid-cols-3 gap-4">
+                        <a href="https://x.com/GoKiteAI" target="_blank" class="link-btn link-btn-social">
+                            <i class="fab fa-twitter text-xl"></i>
+                            <span class="ml-2 hidden sm:inline">X</span>
+                        </a>
+                        <a href="https://github.com/gokite-ai" target="_blank" class="link-btn link-btn-social">
+                            <i class="fab fa-github text-xl"></i>
+                            <span class="ml-2 hidden sm:inline">GitHub</span>
+                        </a>
+                        <a href="https://discord.com/invite/Gqvh6hv9qt" target="_blank" class="link-btn link-btn-social">
+                            <i class="fab fa-discord text-xl"></i>
+                            <span class="ml-2 hidden sm:inline">Discord</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+       
+                <div class="card border-t-8 border-color-secondary-accent p-6 text-center">
+                    
+                    <!-- Updated Heading Color to Red -->
+                    <h4 class="text-3xl font-bold text-red-600 mb-4">VaultiQ | Web3 & AI</h4>
+                    
+                    <!-- Updated Bio Text to 3 lines -->
+                    <p class="text-base text-gray-700 mb-6 font-medium space-y-2">
+                        <span>🌐 Web3 Enthusiast | Crypto Explorer</span> 
+                        <br>
+                        <span>Believing in decentralization & community power</span>
+                        <br>
+                        <span class="inline-block">🔥 Building the future with <strong class="text-red-600">@Tabichain</strong> & <strong class="text-red-600">@GoKiteAI</strong> | Tabi SBT Winner 💢</span>
+                    </p>
+
+                    <div class="flex justify-center flex-wrap gap-5 text-sm font-medium mt-6">
+                        <!-- X/Twitter Link (Icon Only) -->
+                        <a href="https://x.com/VaultiQx" target="_blank" title="X / Twitter: @VaultiQx" class="social-icon-btn bg-black hover:bg-gray-800 text-white text-xl">
+                            <i class="fab fa-twitter"></i>
+                            <span class="sr-only">X / Twitter: @VaultiQx</span> 
+                        </a>
+                        
+                        <!-- Telegram Info (Icon Only) -->
+                        <a href="#" target="_blank" title="Telegram: @VaultiQxx" class="social-icon-btn bg-cyan-600 hover:bg-cyan-700 text-white text-xl">
+                            <i class="fab fa-telegram-plane"></i>
+                            <span class="sr-only">Telegram: @VaultiQxx</span> 
+                        </a>
+                        
+                        <!-- Discord Info (Icon Only) -->
+                        <a href="#" target="_blank" title="Discord: vaultiqx" class="social-icon-btn bg-indigo-600 hover:bg-indigo-700 text-white text-xl">
+                            <i class="fab fa-discord"></i>
+                            <span class="sr-only">Discord: vaultiqx</span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-100 mt-12 border-t border-gray-200">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <!-- Simplified Footer -->
+            <p class="text-sm">GoKite.ai - The Agentic Internet Infrastructure.</p>
+            <p class="text-xs text-gray-400 mt-1">Infographic content based on official Kite AI sources.</p>
+        </div>
+    </footer>
+</body>
+</html>
